@@ -40,4 +40,6 @@ app.delete('/user/:id',(req, res) => {
     users.splice(findUserIdx, 1);
     res.status(200).json({"message": "User deleted successfully"});
 })
-app.listen(2000);
+app.listen(2000||process.env.PORT, () => {
+    console.log("Server Is Running")
+});
